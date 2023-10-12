@@ -14,11 +14,13 @@
 flask-restx-s3 % python3 -m venv venv
 flask-restx-s3 % source venv/bin/activate
 (venv) flask-restx-s3 %
+(venv) flask-restx-s3 % python3 -m pip install --upgrade pip setuptools wheel
 (venv) flask-restx-s3 % pip install flask
 (venv) flask-restx-s3 % pip install python-dotenv
 (venv) flask-restx-s3 % pip install flask-restx
 (venv) flask-restx-s3 % pip install flask-sqlalchemy
 (venv) flask-restx-s3 % pip install boto3
+(venv) flask-restx-s3 % pip install opencv-python
 ```
 
 #### Useful Links:
