@@ -3,3 +3,4 @@ S3_BUCKET=[Your S3 Bucket Name]
 AWS_DEFAULT_REGION=us-west-2
 AWS_ACCESS_KEY_ID=[Your AWS ACCESS KEY ID]
 AWS_SECRET_ACCESS_KEY=[Your AWS SECRET ACCESS KEY]
+UPLOAD_FOLDER=[Server File Directory to cache uploaded files]
