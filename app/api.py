@@ -3,11 +3,29 @@ import os
 from flask_restx import Resource, Namespace, reqparse
 from werkzeug.datastructures import FileStorage
 
+from .api_model import image_model
+
+img_store = [
+    {
+        "name": "snowflake.jpg",
+        "type": "jpeg",
+        "owner": "wikipedia.org"
+    }
+]
+
 rest_api_ns = Namespace("api")
 
 upload_api_parser = reqparse.RequestParser()
 upload_api_parser.add_argument('imginfo', location='files', type=FileStorage, required=True)
 upload_api_parser.add_argument('imgfile', location='files', type=FileStorage, required=True)
+
+
+@rest_api_ns.route("/imgstore")
+class ImageStore(Resource):
+
+    @rest_api_ns.marshal_list_with(image_model)
+    def get(self):
+        return img_store
 
 
 @rest_api_ns.route("/upload")
